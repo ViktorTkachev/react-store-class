@@ -1,5 +1,6 @@
 import './App.css';
-import CardItem from './CardItem';
+import React from 'react';
+import CardItemClass from './CardItem';
 
 const item = {
   brand: 'Tiger of Sweden',
@@ -11,16 +12,20 @@ const item = {
   currency: '£',
 };
 
-const App = () => (
-  <div className="container">
-    <div className="background-element"></div>
-    <div className="highlight-window">
-      <div className="highlight-overlay"></div>
-    </div>
-    <div className="window">
-      <CardItem props={item} />
-    </div>
-  </div>
-);
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <div className="background-element"></div>
+        <div className="highlight-window">
+          <div className="highlight-overlay"></div>
+        </div>
+        <div className="window">
+          <CardItemClass item={item} />
+        </div>
+      </div>
+    );
+  }
+}
 
 export default App;

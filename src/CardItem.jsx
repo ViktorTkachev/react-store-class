@@ -17,7 +17,7 @@ class CardItemClass extends React.Component {
         <div className="purchase-info">
           <div className="price">
             {currency}
-            {price}
+            {price.toFixed(2)}
           </div>
           <button>Добавить в корзину</button>
         </div>
